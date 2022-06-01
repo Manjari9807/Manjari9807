@@ -1,0 +1,63 @@
+package practice;
+import java.util.Scanner;
+public class matrixmultiplication {
+public static void main(String[] args) {
+	int i,j,k,r1,r2,c1,c2;
+	Scanner scan=new Scanner(System.in);
+	System.out.println("enter the number of rows in matrix1" );
+	 r1=scan.nextInt();
+	 System.out.println("enter the column in matrix1");
+	 c1=scan.nextInt();
+	 System.out.println("enter the number of rows in matrix 2");
+	 r2=scan.nextInt();
+	 System.out.println("enter the number of column in matrix2");
+	 c2=scan.nextInt();
+	if(c1==r2)
+	{
+		int mat1[][]=new int[r1][c1];
+		int mat2[][]=new int[r2][c2];
+		int resu[][]=new int[r1][c2];
+		System.out.println("enter the elements for matrix1");
+		for(i=0;i<r1;i++)
+		{
+			for(j=0;j<c1;j++)
+			
+			mat1[i][j]=scan.nextInt();
+			
+		}
+		System.out.println("enter the elements for matrix2");
+		for(i=0;i<r2;i++)
+		{
+			for(j=0;j<c2;j++)
+			
+			mat2[i][j]=scan.nextInt();
+			
+		}
+		for(i=0;i<r1;i++)
+		
+			for(j=0;j<c2;j++)
+			{
+		    int sum=0;
+		    for( k=0;k<r2;k++)
+		    {
+		    	 sum+=mat1[i][k]*mat2[k][j];
+		    }
+		    resu[i][j]=sum;
+			}
+	     
+		for(i=0;i<r1;i++)
+		{
+			for(j=0;j<c2;j++)
+			
+				System.out.print(resu[i][j] + " ");
+			
+		
+		System.out.println();
+		}
+	}
+	else
+	
+		System.out.println("not exist");
+	
+}
+}
