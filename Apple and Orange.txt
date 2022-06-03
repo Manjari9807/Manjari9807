@@ -1,0 +1,55 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+import java.util.Scanner;
+public class Result {
+
+    /*
+     * Complete the 'countApplesAndOranges' function below.
+     *
+     * The function accepts following parameters:
+     *  1. INTEGER s
+     *  2. INTEGER t
+     *  3. INTEGER a
+     *  4. INTEGER b
+     *  5. INTEGER_ARRAY apples
+     *  6. INTEGER_ARRAY oranges
+     */
+
+  public static void main(String[] args)
+  {
+       Scanner in = new Scanner(System.in);
+        int s = in.nextInt();
+        int t = in.nextInt();
+        int a = in.nextInt();
+        int b = in.nextInt();
+        int m = in.nextInt();
+        int n = in.nextInt();
+        int[] apple = new int[m];
+        for(int i=0; i < m; i++){
+            apple[i] = in.nextInt() + a;
+        }
+        int[] orange = new int[n];
+        for(int i=0;i < n; i++){
+            orange[i] = in.nextInt() + b;
+        }
+        int Applecount = 0;
+        int Orangecount = 0;
+        for (int app : apple) {
+            if (app >= s && app <= t) {
+                Applecount += 1;
+            }
+        }
+        for (int ora : orange) {
+            if (ora >= s && ora <= t) {
+             Orangecount += 1;
+            }
+        }
+        System.out.println(Applecount);
+        System.out.println(Orangecount);
+  }
+}

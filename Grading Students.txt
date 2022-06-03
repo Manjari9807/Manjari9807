@@ -1,0 +1,28 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+import java.util.Scanner;
+
+public class Result
+{
+    public static void main(String [] args)
+    {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        
+        for(int i=0;i<n;i++)
+        {
+            int grades=s.nextInt();
+            if(grades>=38 && grades%5>=3 )
+            {
+                grades+=5-(grades%5);
+            }
+              System.out.println(grades);
+        }
+      
+    }
+}
