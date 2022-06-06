@@ -8,6 +8,7 @@ public class CharacterChecking {
 		{
 			System.out.print(ch1);
 			ch1++;
+			//ch1+=2;
 		}
 
 	}
