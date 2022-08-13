@@ -9,7 +9,7 @@ public class BufferWriter {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		File f=new File("C:\\Users\\MANJARI\\Desktop\\kashini\\thiru\\manjari.txt");
+		File f=new File("C:\\Users\\MANJARI\\Desktop\\kashini\\manjari.txt");
 		try {
 		FileWriter fw = new FileWriter (f,true);//append .dont delete previous one
 		BufferedWriter bw=new BufferedWriter(fw);
@@ -38,7 +38,6 @@ public class BufferWriter {
 	    	System.out.println(sentencecount);
 	    	System.out.println(charcount);
 	    	System.out.println(linecount);
-	    	
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
